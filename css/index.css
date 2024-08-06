@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 80px; /* Aumentado para dar más espacio */
 }
 
 #nav {
@@ -15,6 +16,11 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .imgLogo {
@@ -62,7 +68,7 @@ footer {
 /* Estilos para el contenedor principal */
 .contenedor {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 40px auto; /* Aumentado el margen superior e inferior */
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -85,36 +91,21 @@ footer {
 /* Responsive design para el contenedor */
 @media screen and (max-width: 1220px) {
     .contenedor {
-        margin: 20px;
+        margin: 40px 20px; /* Manteniendo el margen aumentado */
     }
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        padding-top: 140px; /* Aumentado para dar más espacio en móviles */
+    }
+
     .contenedor {
         padding: 15px;
-        margin: 20px;
+        margin: 30px 20px; /* Ajustado para mantener el espacio en móviles */
         margin-bottom: 40px;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .contenedor {
-        margin: 10px;
-        padding: 10px;
-        margin-bottom: 30px;
-    }
-
-    .contenedor h1 {
-        font-size: 24px;
-    }
-
-    .contenedor p {
-        font-size: 14px;
-    }
-}
-
-/* Responsive design */
-@media screen and (max-width: 768px) {
     #nav {
         flex-direction: column;
         align-items: center;
@@ -142,6 +133,24 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        padding-top: 200px; /* Aumentado para dispositivos más pequeños */
+    }
+
+    .contenedor {
+        margin: 20px 10px; /* Ajustado para dispositivos más pequeños */
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    .contenedor h1 {
+        font-size: 24px;
+    }
+
+    .contenedor p {
+        font-size: 14px;
+    }
+
     #menu li a {
         padding: 10px;
         font-size: 14px;
